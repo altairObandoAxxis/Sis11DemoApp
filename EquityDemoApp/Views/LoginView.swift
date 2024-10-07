@@ -10,9 +10,9 @@ import Sis11Framework;
 struct LoginView: View {
     @Environment(\.modelContext) private var modelContext;
     /// User Name
-    @State var email: String = "equityuat\\noel.obando@axxis-systems.com";
+    @State var email: String = "equityuat\\";
     /// User Password
-    @State var pass : String = "Axxis2024!!!";
+    @State var pass : String = "";
     /// Reference for loading state
     @State var loading: Bool = false;
     /// Show Error message
