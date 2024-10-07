@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1141BE222CB44CD20068A621 /* PolicyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1141BE1F2CB44CD20068A621 /* PolicyList.swift */; };
+		1141BE232CB44CD20068A621 /* PolicyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1141BE1E2CB44CD20068A621 /* PolicyItem.swift */; };
+		1141BE262CB44CE10068A621 /* Sis11AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1141BE242CB44CE10068A621 /* Sis11AuthData.swift */; };
+		1141BE2B2CB44CEB0068A621 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1141BE292CB44CEB0068A621 /* MainView.swift */; };
+		1141BE2C2CB44CEB0068A621 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1141BE282CB44CEB0068A621 /* LoginView.swift */; };
+		1141BE2D2CB44CEB0068A621 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1141BE272CB44CEB0068A621 /* HomeView.swift */; };
+		1165D2532CB4513600C57919 /* Sis11SDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1165D2522CB4513600C57919 /* Sis11SDK */; };
 		11C1C9F42C9BA29900576015 /* EquityDemoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C1C9F32C9BA29900576015 /* EquityDemoAppApp.swift */; };
 		11C1C9F62C9BA29900576015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C1C9F52C9BA29900576015 /* ContentView.swift */; };
 		11C1C9F82C9BA29900576015 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C1C9F72C9BA29900576015 /* Item.swift */; };
@@ -15,6 +22,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1141BE1E2CB44CD20068A621 /* PolicyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyItem.swift; sourceTree = "<group>"; };
+		1141BE1F2CB44CD20068A621 /* PolicyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyList.swift; sourceTree = "<group>"; };
+		1141BE242CB44CE10068A621 /* Sis11AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sis11AuthData.swift; sourceTree = "<group>"; };
+		1141BE272CB44CEB0068A621 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1141BE282CB44CEB0068A621 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1141BE292CB44CEB0068A621 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		11C1C9F02C9BA29900576015 /* EquityDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EquityDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C1C9F32C9BA29900576015 /* EquityDemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquityDemoAppApp.swift; sourceTree = "<group>"; };
 		11C1C9F52C9BA29900576015 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,12 +42,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1165D2532CB4513600C57919 /* Sis11SDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1141BE202CB44CD20068A621 /* LifePolicy */ = {
+			isa = PBXGroup;
+			children = (
+				1141BE1E2CB44CD20068A621 /* PolicyItem.swift */,
+				1141BE1F2CB44CD20068A621 /* PolicyList.swift */,
+			);
+			path = LifePolicy;
+			sourceTree = "<group>";
+		};
+		1141BE212CB44CD20068A621 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1141BE202CB44CD20068A621 /* LifePolicy */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1141BE252CB44CE10068A621 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1141BE242CB44CE10068A621 /* Sis11AuthData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1141BE2A2CB44CEB0068A621 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1141BE272CB44CEB0068A621 /* HomeView.swift */,
+				1141BE282CB44CEB0068A621 /* LoginView.swift */,
+				1141BE292CB44CEB0068A621 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		11C1C9E72C9BA29900576015 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +103,9 @@
 		11C1C9F22C9BA29900576015 /* EquityDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				1141BE2A2CB44CEB0068A621 /* Views */,
+				1141BE252CB44CE10068A621 /* Models */,
+				1141BE212CB44CD20068A621 /* Components */,
 				11C1C9F32C9BA29900576015 /* EquityDemoAppApp.swift */,
 				11C1C9F52C9BA29900576015 /* ContentView.swift */,
 				11C1C9F72C9BA29900576015 /* Item.swift */,
@@ -116,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 11C1C9E72C9BA29900576015;
+			packageReferences = (
+				1165D2512CB4513500C57919 /* XCLocalSwiftPackageReference "../sis11sdk" */,
+			);
 			productRefGroup = 11C1C9F12C9BA29900576015 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,8 +198,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C1C9F62C9BA29900576015 /* ContentView.swift in Sources */,
+				1141BE222CB44CD20068A621 /* PolicyList.swift in Sources */,
+				1141BE232CB44CD20068A621 /* PolicyItem.swift in Sources */,
+				1141BE2B2CB44CEB0068A621 /* MainView.swift in Sources */,
+				1141BE2C2CB44CEB0068A621 /* LoginView.swift in Sources */,
+				1141BE2D2CB44CEB0068A621 /* HomeView.swift in Sources */,
 				11C1C9F82C9BA29900576015 /* Item.swift in Sources */,
 				11C1C9F42C9BA29900576015 /* EquityDemoAppApp.swift in Sources */,
+				1141BE262CB44CE10068A621 /* Sis11AuthData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +349,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -326,7 +387,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -363,6 +424,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1165D2512CB4513500C57919 /* XCLocalSwiftPackageReference "../sis11sdk" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../sis11sdk;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1165D2522CB4513600C57919 /* Sis11SDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Sis11SDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11C1C9E82C9BA29900576015 /* Project object */;
 }
