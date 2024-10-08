@@ -21,7 +21,7 @@ struct HomeView: View {
                         .tabItem{
                             Label("Home", systemImage: "heart")
                         }
-                    Text("Quote A Product").tabItem{
+                    ProductView().tabItem{
                         Label("Quote", systemImage: "list.bullet.below.rectangle")
                     }
                     Text("User Claims").tabItem{
@@ -37,7 +37,12 @@ struct HomeView: View {
             let sdk = Sis11SDK.shared;
             do{
                 let response = try await sdk.contact.GetContactData();
-                contactData = response;
+                if var dataResponse = response {
+                    contactData = response;
+                    if SDK.contactData.Contact.id == 0{
+                        SDK.contactData = dataResponse
+                    }
+                }
             }catch{
                 print(error)
             }

@@ -11,8 +11,12 @@ import SwiftData
 struct ContentView: View {
     @Query private var users: [Sis11AuthData];
     @State private var userLogged: Bool = false;
+    @State private var checking: Bool = true
     var body: some View {
         VStack{
+            if checking {
+                ProgressView()
+            }
             if !userLogged {
                 LoginView(userLogged: $userLogged)
             }else{
@@ -20,6 +24,7 @@ struct ContentView: View {
             }
         }.task {
             userLogged = !users.isEmpty && (users.first?.userToken ?? String()) != String()
+            checking.toggle()
         }
     }
 }

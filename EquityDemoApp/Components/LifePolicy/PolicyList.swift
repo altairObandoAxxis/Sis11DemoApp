@@ -12,14 +12,14 @@ struct PolicyList: View {
     @StateObject var model: PolicyViewModel = PolicyViewModel();
     var body: some View {
         NavigationView{
-            List(userPolicies, id: \.id ){ lifePolicy in
+            List(model.filteredPolicies, id: \.id ){ lifePolicy in
                 NavigationLink(destination: Text("Policy Selected: \(lifePolicy.code ?? lifePolicy.id.description )")){
                     PolicyItem(lifePolicy: lifePolicy)
                 }
             }
         }.onAppear {
             model.policies = [LifePolicy]();
-            model.policies.append(contentsOf: userPolicies)
+            model.policies.append(contentsOf: userPolicies);
         }.searchable(text: $model.searchText, prompt: "Search by policy code" )
     }
 }
